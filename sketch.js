@@ -11,7 +11,7 @@ var slingshot;
 
 function preload()
 {
-  ballp = loadImage("hexagon.png");
+  ballp = loadImage("polygon.png");
 }
 
 function setup() {
@@ -25,7 +25,7 @@ function setup() {
   ball = Bodies.circle(50, 200, 10);
   World.add(world, ball);
 
-  slingshot = new Sling(this.ball, {x: 100, y: 200});
+  slingshot = new Chain(this.ball, {x: 100, y: 200});
 
   box1 = new Box(width/2-230, height/2+120, 30, 40);
   box2 = new Box(width/2-200, height/2+120, 30, 40);
